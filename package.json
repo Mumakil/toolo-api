@@ -1,0 +1,32 @@
+{
+  "name": "toolo-api",
+  "version": "1.0.0",
+  "description": "Date lookup api to check if there's a game in Töölö",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "npm run lint && npm run flow",
+    "build": "babel src -d lib",
+    "lint": "eslint \"src/**\" index.js",
+    "flow": "flow check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mumakil/toolo-api.git"
+  },
+  "author": "Otto Vehviläinen <otto@mumakil.fi>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mumakil/toolo-api/issues"
+  },
+  "homepage": "https://github.com/Mumakil/toolo-api#readme",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-env": "^1.1.8",
+    "eslint": "^3.15.0",
+    "flow-bin": "^0.39.0"
+  },
+  "dependencies": {}
+}
