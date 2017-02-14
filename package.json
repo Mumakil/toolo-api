@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "npm run lint && npm run flow",
-    "build": "babel src -d lib",
-    "lint": "eslint \"src/**\" index.js",
-    "flow": "flow check"
+    "lint": "eslint \"lib/**\" \"script/**\" index.js",
+    "flow": "flow check",
+    "build": "npm run lint && npm run flow",
+    "data:hifk": "babel-node script/hifk",
+    "data:hjk": "babel-node script/hjk"
   },
   "repository": {
     "type": "git",
@@ -22,11 +23,18 @@
   "homepage": "https://github.com/Mumakil/toolo-api#readme",
   "devDependencies": {
     "babel-cli": "^6.22.2",
+    "babel-eslint": "^7.1.1",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-polyfill": "^6.22.0",
     "babel-preset-env": "^1.1.8",
+    "cozy-ical": "^1.1.22",
     "eslint": "^3.15.0",
+    "eslint-plugin-flowtype": "^2.30.0",
     "flow-bin": "^0.39.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "babel-register": "^6.23.0",
+    "koa": "^1.2.5",
+    "lodash": "^4.17.4"
+  }
 }

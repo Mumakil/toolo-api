@@ -5,10 +5,15 @@ module.exports = {
   },
   "extends": [
     "eslint:recommended",
+    "plugin:flowtype/recommended"
   ],
+  "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module"
   },
+  "plugins": [
+    "flowtype"
+  ],
   "rules": {
     "indent": [
       "error",
@@ -26,5 +31,10 @@ module.exports = {
       "error",
       "always"
     ]
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": false
+    }
   }
 };
