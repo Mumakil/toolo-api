@@ -9,7 +9,8 @@
     "flow": "flow check",
     "build": "npm run lint && npm run flow",
     "data:hifk": "babel-node script/hifk",
-    "data:hjk": "babel-node script/hjk"
+    "data:hjk": "babel-node script/hjk",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,8 @@
   "dependencies": {
     "babel-register": "^6.23.0",
     "koa": "^1.2.5",
+    "koa-cors": "0.0.16",
+    "koa-route": "^2.4.2",
     "lodash": "^4.17.4"
   }
 }
